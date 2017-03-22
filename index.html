@@ -62,96 +62,119 @@
     </section>
     <section class="main-section" id="for_statement">
       <header>
-       for statement
+       <code>for</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
-      <ul>
-        <li>List item</li>
+      <p>A <code>for loop</code> repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop. A for statement looks as follows:</p>
+      <code>for ([initialExpression]; [condition]; [incrementExpression])
+  statement</code>
+      <p>When a for loop executes, the following occurs:</p>
+      <ol>
+        <li>The initializing expression initialExpression, if any, is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.</li>
+        <li>The condition expression is evaluated. If the value of condition is true, the loop statements execute. If the value of condition is false, the for loop terminates. If the condition expression is omitted entirely, the condition is assumed to be true.</li>
+        <li>The statement executes. To execute multiple statements, use a block statement ({ ... }) to group those statements.</li>
+        <li>The update expression incrementExpression, if there is one, executes, and control returns to step 2.</li>
       </ul>
+    
     </section>
     <section class="main-section" id="do...while_statement">
       <header>
-        do...while statement
+        <code>do...while</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
-      <ul>
-        <li>List item</li>
-      </ul>
+      <p>The do...while statement repeats until a specified condition evaluates to false. A do...while statement looks as follows:</p>
+      <code> do <br>
+              &nbsp;statement<br>
+            while (condition);
+      </code>
+      <p><code>Statement</code> executes once before the condition is checked. To execute multiple statements, use a block statement ({ ... }) to group those statements. If <code>condition</code> is true, the statement executes again. At the end of every execution, the condition is checked. When the condition is false, execution stops and control passes to the statement following <code>do...while</code>.</p>
     </section>
     <section class="main-section" id="while_statement">
       <header>
-        while statement
+        <code>while</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
-      <ul>
-        <li>List item</li>
-      </ul>
+      <p>A <code>while</code> statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
+      <code>while (condition)<br>
+        statement
+      </code>
+      <p>If the condition becomes <code>false, statement</code> within the loop stops executing and control passes to the statement following the loop.</p>
+      <p>The condition test occurs before <code>statement</code> in the loop is executed. If the condition returns true, <code>statement</code> is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following <code>while</code>.</p>
+      <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
     </section>
     <section class="main-section" id="labeled_statement">
       <header>
-        labeled statement
+        <code>labeled</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
-      <ul>
-        <li>List item</li>
-      </ul>
+      <p>A <code>label</code> provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.</p>
+
+      <p>The syntax of the labeled statement looks like the following:</p>
+      <code>label : <br>
+      statement
+      </code>
+      <p>The value of <code>label</code> may be any JavaScript identifier that is not a reserved word. The statement that you identify with a label may be any statement.</p>
     </section>
     <section class="main-section" id="break_statement">
       <header>
-        break statement
+        <code>break</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
+      <p>Use the break statement to terminate a loop, <code>switch</code>, or in conjunction with a labeled statement.</p>
       <ul>
-        <li>List item</li>
+        <li>When you use break without a label, it terminates the innermost enclosing while, do-while, for, or switch immediately and transfers control to the following statement.</li>
+        <li>When you use break with a label, it terminates the specified labeled statement.</li>
       </ul>
+      <p>The syntax of the break statement looks like this:</p>
+      <code>break [label];</code>
+      <p>The first form of the syntax terminates the innermost enclosing loop or switch; the second form of the syntax terminates the specified enclosing labeled statement.</p>
     </section>
     <section class="main-section" id="continue_statement">
       <header>
-        continue statement
+        <code>continue</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
+      <p>The <code>continue</code> statement can be used to restart a <code>while, do-while, for,</code> or <code>label</code> statement.</p>
       <ul>
-        <li>List item</li>
-      </ul>
+        <li>When you use continue without a label, it terminates the current iteration of the innermost enclosing while, do-while, or for statement and continues execution of the loop with the next iteration. In contrast to the break statement, continue does not terminate the execution of the loop entirely. In a while loop, it jumps back to the condition. In a for loop, it jumps to the increment-expression.</li>
+        <li>When you use continue with a label, it applies to the looping statement identified with that label.</li>
+      <p>The syntax of the continue statement looks like the following:</p>
+      <code>continue [label];</code>
     </section>
     <section class="main-section" id="for...in_statement">
       <header>
-        for...in statement
+        <code>for...in</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
-      <ul>
-        <li>List item</li>
-      </ul>
+      <p>The <code>for...in</code> statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements. A <code>for...in</code> statement looks as follows:</p>
+      <code>for (variable in object) {<br>
+        statements<br>
+        }
+      </code>
     </section>
     <section class="main-section" id="for...of_statement">
       <header>
-        for...of statement
+        <code>for...of</code> statement
       </header>
-      <p>Section Text1</p>
-      <p>Section Text2</p>
-      <code>Code here</code>
-      <ul>
-        <li>List item</li>
-      </ul>
+      <p>The <code>for...of</code> statement creates a loop Iterating over iterable objects (including Array, Map, Set, arguments object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.</p>
+      <code>
+      for (variable of object) {<br>
+        statement<br>
+      }
+      </code>
+      <p> The following example shows the difference between a<code> for...of</code> loop and a <code>for...in</code> loop. While <code>for...in</code> iterates over property names, <code>for...of</code> iterates over property values:
+      <code>
+        let arr = [3, 5, 7];<br>
+        arr.foo = 'hello'; <br>
+
+        for (let i in arr) { <br>
+        console.log(i); // logs "0", "1", "2", "foo"<br>
+        } <br>
+
+        for (let i of arr) { <br>
+         console.log(i); // logs 3, 5, 7 <br>
+        } <br></code>
     </section>
-  </main>
   <footer>
-  <script src="scripts/main.js" type="text/javascript"></script>
-  <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js" type="text/javascript"> </script>
+    All Information comes from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/">MDN</a>.
   </footer>
+  </main>
+  <foot>
+  <script src="scripts/main.js" type="text/javascript"></script>
+  <!--<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js" type="text/javascript"> </script>-->
+  </foot>
   </body>
 </html>
