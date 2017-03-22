@@ -1,0 +1,30 @@
+body{
+	font-family: 'open-sans', sans-serif;
+}
+#navbar{
+	display: flex;
+	flex-flow: column nowrap;
+	position: fixed;
+	margin: 10px auto;
+}
+
+#main-doc{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	width: 80%;
+	margin: auto;
+	margin-left: 152px;
+}
+.main-section{
+	display: flex;
+	flex-flow: column nowrap;
+	margin: auto;
+
+}
+
+@media (min-width: 900px){
+	#navbar{
+		position: fixed;
+	}
+}
