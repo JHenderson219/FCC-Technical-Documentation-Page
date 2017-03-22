@@ -20,7 +20,7 @@ body{
 	display: flex;
 	flex-flow: column nowrap;
 	margin: auto;
-
+	justify-content: center;
 }
 
 @media (min-width: 900px){
